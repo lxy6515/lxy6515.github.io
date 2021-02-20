@@ -66,7 +66,7 @@
     <link href="http://example.com/2021/02/19/1/"/>
     <id>http://example.com/2021/02/19/1/</id>
     <published>2021-02-19T10:02:26.040Z</published>
-    <updated>2021-02-20T07:47:18.982Z</updated>
+    <updated>2021-02-20T08:05:13.866Z</updated>
     
     <content type="html"><![CDATA[<p>welcome to my space </p><h3 id="第一次建站经历"><a href="#第一次建站经历" class="headerlink" title="第一次建站经历"></a>第一次建站经历</h3><p>非常感谢网上的大量教学,正是因为互联网的普及让我有了如此多的学习机会<br>再次感谢</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">骚皮球憨批</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -78,6 +78,8 @@
       
     
     
+    
+    <category term="教学" scheme="http://example.com/categories/%E6%95%99%E5%AD%A6/"/>
     
     
     <category term="hello world" scheme="http://example.com/tags/hello-world/"/>
