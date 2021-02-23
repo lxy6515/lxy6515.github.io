@@ -11,7 +11,7 @@
 	<meta name="description" content="1.伪造X-Forwarded-For: 127.0.0.1 Referer:https:&#x2F;&#x2F;www.google.com 2. 上传漏洞2.1危害上传木马获取webshell(动态脚本,网页后门) 2.2漏洞利用1234小马:上传小马,体积小,功能少大马:海阳ASP大马,c99shell大马,R59大马一句话木马:APS一句话木马,PHP一句话木马,JSP一句话木马WebShell工具:中国菜刀">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ctf学习">
-<meta property="og:url" content="https://lxy6515.github.io/2021/02/21/%E4%BF%A1%E6%81%AF%E4%BC%AA%E9%80%A0/index.html">
+<meta property="og:url" content="https://lxy6515.github.io/2021/02/21/local%E4%BC%AA%E9%80%A0/index.html">
 <meta property="og:site_name" content="ENIC&#39;s home">
 <meta property="og:description" content="1.伪造X-Forwarded-For: 127.0.0.1 Referer:https:&#x2F;&#x2F;www.google.com 2. 上传漏洞2.1危害上传木马获取webshell(动态脚本,网页后门) 2.2漏洞利用1234小马:上传小马,体积小,功能少大马:海阳ASP大马,c99shell大马,R59大马一句话木马:APS一句话木马,PHP一句话木马,JSP一句话木马WebShell工具:中国菜刀">
 <meta property="og:locale" content="zh_CN">
@@ -26,7 +26,7 @@
 	<meta name="theme-color-rgb" content="94,114,228">
 	<meta name="theme-color-origin" content="#5e72e4">
 	<meta name="argon-enable-custom-theme-color" content="true">
-	<meta name="theme-card-radius" content="4">
+	<meta name="theme-card-radius" content="30">
 	<meta name="theme-version" content="1.0.1">
 	<link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
 	<link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
@@ -178,7 +178,7 @@
 </style>
 <style id="theme_cardradius_css">
 	:root{
-		--card-radius: 4px;
+		--card-radius: 30px;
 	}
 </style>
 
@@ -191,7 +191,7 @@
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<a class="navbar-brand" href="/">ENIC&#39;s home</a>
+				<a class="navbar-brand" href="/">家</a>
 				<div class="navbar-collapse collapse" id="navbar_global">
 					<div class="navbar-collapse-header">
 						<div class="row">
@@ -223,18 +223,28 @@
 											
 										</li>
 									
-										<li class='nav-item dropdown'>
-											<a href='' class='nav-link' onclick='return false;' data-toggle='dropdown' no-pjax>
+										<li class='nav-item'>
+											<a href='/archives' class='nav-link' >
 												<i class='ni ni-book-bookmark d-lg-none'></i>
-												<span class='nav-link-inner--text'>二级菜单</span>
+												<span class='nav-link-inner--text'>归档</span>
 											</a>
 											
-													<div class="dropdown-menu">
-														
-															<a href='/' class='dropdown-item'>归档</a>
-														
-													</div>
-												
+										</li>
+									
+										<li class='nav-item'>
+											<a href='/repository' class='nav-link' >
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'>仓库</span>
+											</a>
+											
+										</li>
+									
+										<li class='nav-item'>
+											<a href='/about' class='nav-link' >
+												<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'>关于</span>
+											</a>
+											
 										</li>
 									
 							</ul>
@@ -295,9 +305,9 @@
 	
 	<div id="banner_container" class="banner-container container text-center">
 		
-			<div class="banner-title text-white"><span class="banner-title-inner">ENIC&#39;s home</span>
+			<div class="banner-title text-white"><span class="banner-title-inner">欢迎</span>
 		
-		</div>
+		<span class="banner-subtitle d-block">光临</span></div>
 	</div>
 	
 		<style>
@@ -319,7 +329,7 @@
 			top: 0;
 			bottom: 0;
 			z-index: -2;
-			background: url(/assets/img/banner.jpg);
+			background: url(/assets/img/blog_background8_min_dark.webp);
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
@@ -339,7 +349,7 @@
 				top: 0;
 				bottom: 0;
 				z-index: -2;
-				background: url(/assets/img/banner.jpg);
+				background: url(/assets/img/blog_background8_min_light.webp);
 				background-position: center;
 				background-size: cover;
 				background-repeat: no-repeat;
@@ -442,10 +452,19 @@
 <div id="sidebar_mask"></div>
 <aside id="leftbar" class="leftbar widget-area" role="complementary">
 		
+			<div id="leftbar_announcement" class="card bg-white shadow-sm border-0">
+				<div class="leftbar-announcement-body">
+					<div class="leftbar-announcement-title text-white">公告</div>
+					<div class="leftbar-announcement-content text-white">在2021年第一次搬运创建博客</div>
+				</div>
+			</div>
+		
 		<div id="leftbar_part1" class="widget widget_search card bg-white shadow-sm border-0">
 			<div class="leftbar-banner card-body">
-				<span class="leftbar-banner-title text-white">ENIC&#39;s home</span>
+				<span class="leftbar-banner-title text-white">你好!</span>
 				
+				
+					<span class="leftbar-banner-subtitle text-white">hitokoto</span>
 				
 			</div>
 			
@@ -493,11 +512,21 @@
 									})
 								</script>
 								
+									<style>
+										#leftbar_catalog ul {
+											counter-reset: blog_catalog_number;
+										}
+										#leftbar_catalog li.index-item > a:before {
+											content: counters(blog_catalog_number, '.') " ";
+											counter-increment: blog_catalog_number;
+										}
+									</style>
+								
 							</div>
 						
 						<div class="tab-pane fade text-center" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
-							<img id="leftbar_overview_author_image" src="/assets/img/auther.jpg" class="img-fluid rounded-circle shadow-sm" style="width: 100px;" alt="avatar">
-							<h6 id="leftbar_overview_author_name">ENIC&#39;s home</h6>
+							<img id="leftbar_overview_author_image" src="/assets/img/avatar3_500.png" class="img-fluid rounded-circle shadow-sm" style="width: 100px;" alt="avatar">
+							<h6 id="leftbar_overview_author_name">enic</h6>
 							<nav class="site-state">
 								<div class="site-state-item site-state-posts">
 									<a href="/archives">
@@ -522,15 +551,15 @@
 									<div class="site-author-links">
 										
 											<div class='site-author-links-item'>
-												<a href="/" rel='noopener' target='_blank'>aaa</a>
+												<a href="https://www.bilibili.com/" rel='noopener' target='_blank'>bilibili</a>
 											</div>
 										
 											<div class='site-author-links-item'>
-												<a href="/" rel='noopener' target='_blank'>bbb</a>
+												<a href="https://www.youtube.com/" rel='noopener' target='_blank'>YouTube</a>
 											</div>
 										
 											<div class='site-author-links-item'>
-												<a href="/" rel='noopener' target='_blank'>ccc</a>
+												<a href="www.github.com/lxy6515/" rel='noopener' target='_blank'>github</a>
 											</div>
 										
 									</div>
@@ -541,15 +570,7 @@
 										<ul class='site-friend-links-ul'>
 											
 												<li class='site-friend-links-item'>
-													<a href='/' rel='noopener' target='_blank'>aaa</a>
-												</li>
-											
-												<li class='site-friend-links-item'>
-													<a href='/' rel='noopener' target='_blank'>bbb</a>
-												</li>
-											
-												<li class='site-friend-links-item'>
-													<a href='/' rel='noopener' target='_blank'>ccc</a>
+													<a href='/' rel='noopener' target='_blank'>暂无友链</a>
 												</li>
 											
 										</ul>
@@ -600,7 +621,7 @@
 	<article class="post post-full card bg-white shadow-sm border-0 ">
 	<header class="post-header text-center">
 		
-		<a class="post-title" href="/2021/02/21/%E4%BF%A1%E6%81%AF%E4%BC%AA%E9%80%A0/">ctf学习</a>
+		<a class="post-title" href="/2021/02/21/local%E4%BC%AA%E9%80%A0/">ctf学习</a>
 		<div class="post-meta">
 			
 						
@@ -706,7 +727,7 @@
 				<span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
 			</button>
 		</a>
-		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=https://lxy6515.github.io/2021/02/21/%E4%BF%A1%E6%81%AF%E4%BC%AA%E9%80%A0/&text=ctf学习" tooltip="分享到 Telegram">
+		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=https://lxy6515.github.io/2021/02/21/local%E4%BC%AA%E9%80%A0/&text=ctf学习" tooltip="分享到 Telegram">
 			<button class="btn btn-icon btn-primary" style="background: #42a5f5;border: none;">
 				<span class="btn-inner--icon"><i class="fa fa-telegram"></i></span>
 			</button>
@@ -728,7 +749,7 @@
 Referer:https://www...',
 	    wechatQrcodeTitle : "分享到微信",
 	    wechatQrcodeHelper : '微信扫描二维码',
-	    source : 'https://lxy6515.github.io/2021/02/21/%E4%BF%A1%E6%81%AF%E4%BC%AA%E9%80%A0/'
+	    source : 'https://lxy6515.github.io/2021/02/21/local%E4%BC%AA%E9%80%A0/'
 	});
 	$("#share_show")[0].onclick = function(){
 		$("#share_container").addClass("opened");
@@ -778,11 +799,11 @@ Referer:https://www...',
 	<div id="gitalk-container"></div>
 <script type="text/javascript">
 	var gitalk = new Gitalk({
-		clientID: '',
-		clientSecret: '',
-		repo: '',
-		owner: '',
-		admin: [''],
+		clientID: '0b8a931df0c62793a9da',
+		clientSecret: 'f7dbe8e6b4490f73c7e4efd74b7788ac23c3767a',
+		repo: 'blog',
+		owner: 'lxy6515/',
+		admin: ['lxy6515/'],
 		id: location.pathname,
 		distractionFreeMode: false
 	})

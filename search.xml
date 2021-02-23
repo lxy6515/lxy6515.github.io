@@ -5,8 +5,8 @@
     
     <entry>
       <title>ctf学习</title>
-      <link href="2021/02/21/%E4%BF%A1%E6%81%AF%E4%BC%AA%E9%80%A0/"/>
-      <url>2021/02/21/%E4%BF%A1%E6%81%AF%E4%BC%AA%E9%80%A0/</url>
+      <link href="2021/02/21/local%E4%BC%AA%E9%80%A0/"/>
+      <url>2021/02/21/local%E4%BC%AA%E9%80%A0/</url>
       
         <content type="html"><![CDATA[<h1 id="1-伪造"><a href="#1-伪造" class="headerlink" title="1.伪造"></a>1.伪造</h1><p>X-Forwarded-For: 127.0.0.1</p><p>Referer:<a href="https://www.google.com/">https://www.google.com</a></p><h1 id="2-上传漏洞"><a href="#2-上传漏洞" class="headerlink" title="2. 上传漏洞"></a>2. 上传漏洞</h1><h3 id="2-1危害"><a href="#2-1危害" class="headerlink" title="2.1危害"></a>2.1危害</h3><p>上传木马获取webshell(动态脚本,网页后门)</p><h3 id="2-2漏洞利用"><a href="#2-2漏洞利用" class="headerlink" title="2.2漏洞利用"></a>2.2漏洞利用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">小马:上传小马,体积小,功能少</span><br><span class="line">大马:海阳ASP大马,c99shell大马,R59大马</span><br><span class="line">一句话木马:APS一句话木马,PHP一句话木马,JSP一句话木马</span><br><span class="line">WebShell工具:中国菜刀,中国蚁剑,冰蝎</span><br></pre></td></tr></table></figure><p>大马攻击:操控磁盘,执行命令,盗密拖库,挂黑页</p>]]></content>
       
