@@ -6,7 +6,7 @@
   <link href="https://lxy6515.github.io/atom.xml" rel="self"/>
   
   <link href="https://lxy6515.github.io/"/>
-  <updated>2021-02-21T06:34:07.162Z</updated>
+  <updated>2021-02-26T17:29:58.430Z</updated>
   <id>https://lxy6515.github.io/</id>
   
   <author>
@@ -17,11 +17,110 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>html特殊符号</title>
+    <link href="https://lxy6515.github.io/2021/02/26/html%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7/"/>
+    <id>https://lxy6515.github.io/2021/02/26/html%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7/</id>
+    <published>2021-02-26T15:25:52.000Z</published>
+    <updated>2021-02-26T17:29:58.430Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="HTML特殊符号"><a href="#HTML特殊符号" class="headerlink" title="HTML特殊符号"></a>HTML特殊符号</h1><table><thead><tr><th>箭头</th><th>其他</th></tr></thead><tbody><tr><td>&rarr; &amp;rarr</td><td>&reg; 注册商标</td></tr><tr><td>&larr; &amp;larr</td><td>&copy; 版权所有</td></tr><tr><td>&uarr;   &amp;uarr</td><td>&trade; 商标</td></tr><tr><td>&darr; &amp;darr</td><td></td></tr></tbody></table><p>[^]: </p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;HTML特殊符号&quot;&gt;&lt;a href=&quot;#HTML特殊符号&quot; class=&quot;headerlink&quot; title=&quot;HTML特殊符号&quot;&gt;&lt;/a&gt;HTML特殊符号&lt;/h1&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;箭头&lt;/th&gt;
+&lt;th&gt;其他&lt;/th&gt;
+&lt;/tr</summary>
+      
+    
+    
+    
+    <category term="学习" scheme="https://lxy6515.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="html学习" scheme="https://lxy6515.github.io/tags/html%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>md5绕过</title>
+    <link href="https://lxy6515.github.io/2021/02/26/md5%E7%BB%95%E8%BF%87/"/>
+    <id>https://lxy6515.github.io/2021/02/26/md5%E7%BB%95%E8%BF%87/</id>
+    <published>2021-02-26T12:34:04.000Z</published>
+    <updated>2021-02-26T17:34:50.432Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="PHP中md5绕过"><a href="#PHP中md5绕过" class="headerlink" title="PHP中md5绕过"></a>PHP中md5绕过</h1><h2 id="1-md5-password-ture-的sql注入"><a href="#1-md5-password-ture-的sql注入" class="headerlink" title="1.md5($password,ture)的sql注入"></a>1.md5($password,ture)的sql注入</h2><h3 id="1-1-当数字与字符串比较时-若字符串的数字部分和数字是相同的-那么返回true"><a href="#1-1-当数字与字符串比较时-若字符串的数字部分和数字是相同的-那么返回true" class="headerlink" title="1.1 当数字与字符串比较时,若字符串的数字部分和数字是相同的,那么返回true."></a>1.1 当数字与字符串比较时,若字符串的数字部分和数字是相同的,那么返回true.</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select if(1&#x3D;&quot;1a&quot;,&quot;相等&quot;,&quot;不相等&quot;) as test</span><br><span class="line">as 作为别名使用</span><br><span class="line">if(x,y,z) 类似于三元运算符,x成立,返回y,否则z</span><br></pre></td></tr></table></figure><p><img src="https://img-blog.csdnimg.cn/20200512173718683.JPG"></p><h3 id="1-2-以数字开头的字符串-若开头的字符串不是0-那么在做逻辑运算时候返回1-也就是true"><a href="#1-2-以数字开头的字符串-若开头的字符串不是0-那么在做逻辑运算时候返回1-也就是true" class="headerlink" title="1.2 以数字开头的字符串,若开头的字符串不是0,那么在做逻辑运算时候返回1,也就是true."></a>1.2 以数字开头的字符串,若开头的字符串不是0,那么在做逻辑运算时候返回1,也就是true.</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from user where password &#x3D;&#39;&#39;or&#39;1234a&#39;;</span><br></pre></td></tr></table></figure><p>注: ‘1234a’会当做true对待,任何数和true做逻辑运算返回值都是true</p><h3 id="1-3-例子"><a href="#1-3-例子" class="headerlink" title="1.3 例子"></a>1.3 例子</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from usera where username &#x3D; &#39;admin&#39; and password &#x3D; md5($pass,true)</span><br></pre></td></tr></table></figure><p>有一个很特殊的字符串”<strong>ffifdyop</strong>“  他的md5=276f722736c95d99e921722cf9ed621c 翻译为字符为 ‘or’6�]��!r,��b  拼接</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> usera <span class="keyword">where</span> username <span class="operator">=</span> <span class="string">&#x27;admin&#x27;</span> <span class="keyword">and</span> password <span class="operator">=</span><span class="string">&#x27;&#x27;</span><span class="keyword">or</span><span class="string">&#x27;6�]��!r,��b&#x27;</span></span><br></pre></td></tr></table></figure><p>注:md5为128二进制数组成(16字节) 一般用16进制32位表示,如上27代表 <strong>‘</strong> , 6f 代表<strong>o</strong> , 72 代表<strong>r</strong> .</p><p>成功的绕过只需要知道username就可以查询到密码</p><h2 id="2-不相等值-相同md5绕过"><a href="#2-不相等值-相同md5绕过" class="headerlink" title="2.不相等值,相同md5绕过"></a>2.不相等值,相同md5绕过</h2><h3 id="2-1-弱相等绕过"><a href="#2-1-弱相等绕过" class="headerlink" title="2.1 == 弱相等绕过"></a>2.1 == 弱相等绕过</h3><p>知识储备:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php </span><br><span class="line">$str &#x3D; &quot;0dff&quot;;</span><br><span class="line">if (0 &#x3D;&#x3D; $str) &#123;</span><br><span class="line">echo &quot;true&quot;;</span><br><span class="line">&#125;else&#123;</span><br><span class="line">echo &quot;false&quot;;</span><br><span class="line">&#125;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure><p>如上执行结果为true,原因是在==下,细节过程为 1. 判断左边类型; 2. 判断右边类型,若于左边不一致,强制转换为与左边一致</p><p>这样结果就是 0== “odff”  <strong><em>→</em></strong> 0==”0” &rarr; true </p><p>在强制转换中,若开头为0x判断为16进制,0开头数字为8进制,0b开口2进制, <strong>.</strong> 为浮点数标志,e或E为科学计数法标志.</p><p>md5() 函数不能处理数组，数组都返回 null，<strong>md5(a[])</strong> 结果为 <strong>null</strong>。</p><p>在md5以0e或0E开头数</p><ul><li>QNKCDZO</li><li>240610708</li><li>s878926199a</li><li>s155964671a    </li></ul><p>在sha1中</p><ul><li><p>aaroZmOk</p></li><li><p>aaK1STfY</p><h3 id="2-2-强比较绕过"><a href="#2-2-强比较绕过" class="headerlink" title="2.2 === 强比较绕过"></a>2.2 === 强比较绕过</h3></li></ul><p>利用md()函数无法处理数字传参时构造如a[]=1&amp;b[]=2,将a b强制为数组 </p><h2 id="3-MD5的碰撞"><a href="#3-MD5的碰撞" class="headerlink" title="3.MD5的碰撞"></a>3.MD5的碰撞</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> ((<span class="keyword">string</span>)<span class="variable">$_POST</span>[<span class="string">&#x27;a&#x27;</span>] !== (<span class="keyword">string</span>)<span class="variable">$_POST</span>[<span class="string">&#x27;b&#x27;</span>] &amp;&amp; md5(<span class="variable">$_POST</span>[<span class="string">&#x27;a&#x27;</span>]) === md5(<span class="variable">$_POST</span>[<span class="string">&#x27;b&#x27;</span>])) &#123;</span><br><span class="line">       <span class="keyword">echo</span> `<span class="variable">$cmd</span>`;</span><br><span class="line">   &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">       <span class="keyword">echo</span> (<span class="string">&quot;md5 is funny ~&quot;</span>);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>这里有一个强制类型转化，若传入数组转化后的结果都是字符串Array。这里需要用到的是MD5碰撞，也就是<strong>不同字符串但是MD5后值相同的情况</strong>。下面的任意两组字符串内容不同，但md5结果相同</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$s1 &#x3D; &quot;%af%13%76%70%82%a0%a6%58%cb%3e%23%38%c4%c6%db%8b%60%2c%bb%90%68%a0%2d%e9%47%aa%78%49%6e%0a%c0%c0%31%d3%fb%cb%82%25%92%0d%cf%61%67%64%e8%cd%7d%47%ba%0e%5d%1b%9c%1c%5c%cd%07%2d%f7%a8%2d%1d%bc%5e%2c%06%46%3a%0f%2d%4b%e9%20%1d%29%66%a4%e1%8b%7d%0c%f5%ef%97%b6%ee%48%dd%0e%09%aa%e5%4d%6a%5d%6d%75%77%72%cf%47%16%a2%06%72%71%c9%a1%8f%00%f6%9d%ee%54%27%71%be%c8%c3%8f%93%e3%52%73%73%53%a0%5f%69%ef%c3%3b%ea%ee%70%71%ae%2a%21%c8%44%d7%22%87%9f%be%79%6d%c4%61%a4%08%57%02%82%2a%ef%36%95%da%ee%13%bc%fb%7e%a3%59%45%ef%25%67%3c%e0%27%69%2b%95%77%b8%cd%dc%4f%de%73%24%e8%ab%66%74%d2%8c%68%06%80%0c%dd%74%ae%31%05%d1%15%7d%c4%5e%bc%0b%0f%21%23%a4%96%7c%17%12%d1%2b%b3%10%b7%37%60%68%d7%cb%35%5a%54%97%08%0d%54%78%49%d0%93%c3%b3%fd%1f%0b%35%11%9d%96%1d%ba%64%e0%86%ad%ef%52%98%2d%84%12%77%bb%ab%e8%64%da%a3%65%55%5d%d5%76%55%57%46%6c%89%c9%df%b2%3c%85%97%1e%f6%38%66%c9%17%22%e7%ea%c9%f5%d2%e0%14%d8%35%4f%0a%5c%34%d3%73%a5%98%f7%66%72%aa%43%e3%bd%a2%cd%62%fd%69%1d%34%30%57%52%ab%41%b1%91%65%f2%30%7f%cf%c6%a1%8c%fb%dc%c4%8f%61%a5%93%40%1a%13%d1%09%c5%e0%f7%87%5f%48%e7%d7%b3%62%04%a7%c4%cb%fd%f4%ff%cf%3b%74%28%1c%96%8e%09%73%3a%9b%a6%2f%ed%b7%99%d5%b9%05%39%95%ab&quot;</span><br><span class="line">$s2 &#x3D; &quot;%af%13%76%70%82%a0%a6%58%cb%3e%23%38%c4%c6%db%8b%60%2c%bb%90%68%a0%2d%e9%47%aa%78%49%6e%0a%c0%c0%31%d3%fb%cb%82%25%92%0d%cf%61%67%64%e8%cd%7d%47%ba%0e%5d%1b%9c%1c%5c%cd%07%2d%f7%a8%2d%1d%bc%5e%2c%06%46%3a%0f%2d%4b%e9%20%1d%29%66%a4%e1%8b%7d%0c%f5%ef%97%b6%ee%48%dd%0e%09%aa%e5%4d%6a%5d%6d%75%77%72%cf%47%16%a2%06%72%71%c9%a1%8f%00%f6%9d%ee%54%27%71%be%c8%c3%8f%93%e3%52%73%73%53%a0%5f%69%ef%c3%3b%ea%ee%70%71%ae%2a%21%c8%44%d7%22%87%9f%be%79%6d%c4%61%a4%08%57%02%82%2a%ef%36%95%da%ee%13%bc%fb%7e%a3%59%45%ef%25%67%3c%e0%27%69%2b%95%77%b8%cd%dc%4f%de%73%24%e8%ab%66%74%d2%8c%68%06%80%0c%dd%74%ae%31%05%d1%15%7d%c4%5e%bc%0b%0f%21%23%a4%96%7c%17%12%d1%2b%b3%10%b7%37%60%68%d7%cb%35%5a%54%97%08%0d%54%78%49%d0%93%c3%b3%fd%1f%0b%35%11%9d%96%1d%ba%64%e0%86%ad%ef%52%98%2d%84%12%77%bb%ab%e8%64%da%a3%65%55%5d%d5%76%55%57%46%6c%89%c9%5f%b2%3c%85%97%1e%f6%38%66%c9%17%22%e7%ea%c9%f5%d2%e0%14%d8%35%4f%0a%5c%34%d3%f3%a5%98%f7%66%72%aa%43%e3%bd%a2%cd%62%fd%e9%1d%34%30%57%52%ab%41%b1%91%65%f2%30%7f%cf%c6%a1%8c%fb%dc%c4%8f%61%a5%13%40%1a%13%d1%09%c5%e0%f7%87%5f%48%e7%d7%b3%62%04%a7%c4%cb%fd%f4%ff%cf%3b%74%a8%1b%96%8e%09%73%3a%9b%a6%2f%ed%b7%99%d5%39%05%39%95%ab&quot;</span><br><span class="line">$s3 &#x3D; &quot;%af%13%76%70%82%a0%a6%58%cb%3e%23%38%c4%c6%db%8b%60%2c%bb%90%68%a0%2d%e9%47%aa%78%49%6e%0a%c0%c0%31%d3%fb%cb%82%25%92%0d%cf%61%67%64%e8%cd%7d%47%ba%0e%5d%1b%9c%1c%5c%cd%07%2d%f7%a8%2d%1d%bc%5e%2c%06%46%3a%0f%2d%4b%e9%20%1d%29%66%a4%e1%8b%7d%0c%f5%ef%97%b6%ee%48%dd%0e%09%aa%e5%4d%6a%5d%6d%75%77%72%cf%47%16%a2%06%72%71%c9%a1%8f%00%f6%9d%ee%54%27%71%be%c8%c3%8f%93%e3%52%73%73%53%a0%5f%69%ef%c3%3b%ea%ee%70%71%ae%2a%21%c8%44%d7%22%87%9f%be%79%ed%c4%61%a4%08%57%02%82%2a%ef%36%95%da%ee%13%bc%fb%7e%a3%59%45%ef%25%67%3c%e0%a7%69%2b%95%77%b8%cd%dc%4f%de%73%24%e8%ab%e6%74%d2%8c%68%06%80%0c%dd%74%ae%31%05%d1%15%7d%c4%5e%bc%0b%0f%21%23%a4%16%7c%17%12%d1%2b%b3%10%b7%37%60%68%d7%cb%35%5a%54%97%08%0d%54%78%49%d0%93%c3%33%fd%1f%0b%35%11%9d%96%1d%ba%64%e0%86%ad%6f%52%98%2d%84%12%77%bb%ab%e8%64%da%a3%65%55%5d%d5%76%55%57%46%6c%89%c9%df%b2%3c%85%97%1e%f6%38%66%c9%17%22%e7%ea%c9%f5%d2%e0%14%d8%35%4f%0a%5c%34%d3%73%a5%98%f7%66%72%aa%43%e3%bd%a2%cd%62%fd%69%1d%34%30%57%52%ab%41%b1%91%65%f2%30%7f%cf%c6%a1%8c%fb%dc%c4%8f%61%a5%93%40%1a%13%d1%09%c5%e0%f7%87%5f%48%e7%d7%b3%62%04%a7%c4%cb%fd%f4%ff%cf%3b%74%28%1c%96%8e%09%73%3a%9b%a6%2f%ed%b7%99%d5%b9%05%39%95%ab&quot;</span><br></pre></td></tr></table></figure><p>又如:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">这边我们记2个固定的值(都是经过了url编码后的);</span><br><span class="line">例1</span><br><span class="line">a&#x3D;M%C9h%FF%0E%E3%5C%20%95r%D4w%7Br%15%87%D3o%A7%B2%1B%DCV%B7J%3D%C0x%3E%7B%95%18%AF%BF%A2%00%A8%28K%F3n%8EKU%B3_Bu%93%D8Igm%A0%D1U%5D%83%60%FB_%07%FE%A2</span><br><span class="line">b&#x3D;M%C9h%FF%0E%E3%5C%20%95r%D4w%7Br%15%87%D3o%A7%B2%1B%DCV%B7J%3D%C0x%3E%7B%95%18%AF%BF%A2%02%A8%28K%F3n%8EKU%B3_Bu%93%D8Igm%A0%D1%D5%5D%83%60%FB_%07%FE%A2</span><br><span class="line">例2</span><br><span class="line">a&#x3D;%4d%c9%68%ff%0e%e3%5c%20%95%72%d4%77%7b%72%15%87%d3%6f%a7%b2%1b%dc%56%b7%4a%3d%c0%78%3e%7b%95%18%af%bf%a2%00%a8%28%4b%f3%6e%8e%4b%55%b3%5f%42%75%93%d8%49%67%6d%a0%d1%55%5d%83%60%fb%5f%07%fe%a2</span><br><span class="line">b&#x3D;%4d%c9%68%ff%0e%e3%5c%20%95%72%d4%77%7b%72%15%87%d3%6f%a7%b2%1b%dc%56%b7%4a%3d%c0%78%3e%7b%95%18%af%bf%a2%02%a8%28%4b%f3%6e%8e%4b%55%b3%5f%42%75%93%d8%49%67%6d%a0%d1%d5%5d%83%60%fb%5f%07%fe%a2</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;PHP中md5绕过&quot;&gt;&lt;a href=&quot;#PHP中md5绕过&quot; class=&quot;headerlink&quot; title=&quot;PHP中md5绕过&quot;&gt;&lt;/a&gt;PHP中md5绕过&lt;/h1&gt;&lt;h2 id=&quot;1-md5-password-ture-的sql注入&quot;&gt;&lt;a href=&quot;</summary>
+      
+    
+    
+    
+    <category term="教学" scheme="https://lxy6515.github.io/categories/%E6%95%99%E5%AD%A6/"/>
+    
+    
+    <category term="md5教学" scheme="https://lxy6515.github.io/tags/md5%E6%95%99%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>js学习</title>
+    <link href="https://lxy6515.github.io/2021/02/24/js%E5%AD%A6%E4%B9%A0/"/>
+    <id>https://lxy6515.github.io/2021/02/24/js%E5%AD%A6%E4%B9%A0/</id>
+    <published>2021-02-24T08:04:42.000Z</published>
+    <updated>2021-02-26T17:29:57.350Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="1-String-fromCharCode-65-97"><a href="#1-String-fromCharCode-65-97" class="headerlink" title="1.String.fromCharCode(65,97)"></a>1.String.fromCharCode(65,97)</h4><p>将 Unicode 编码转为一个字符   上述转换为Aa</p><p>也有<code>String[&quot;fromCharCode&quot;](&quot;65,97&quot;)</code>这种用法</p><h4 id="2-alert-弹出提示框"><a href="#2-alert-弹出提示框" class="headerlink" title="2.alert()弹出提示框"></a>2.alert()弹出提示框</h4><h4 id="3-string-split-separator-limit"><a href="#3-string-split-separator-limit" class="headerlink" title="3.string.split(separator,limit)"></a>3.string.split(separator,limit)</h4><p>separator 分隔符;分割器</p><p>将string以separator分割若有limit将限制个数</p><p>如str=”a,b,c,d”</p><p>var 1st = str.split(“,”,2);那么1st就是一个数组并且1st=[a,b]</p><h4 id="5-console-log"><a href="#5-console-log" class="headerlink" title="5.console.log()"></a>5.console.log()</h4><p>打印变量</p><h4 id="6-document-write-“hello-world”"><a href="#6-document-write-“hello-world”" class="headerlink" title="6.document.write(“hello,world”)"></a>6.document.write(“hello,world”)</h4><p>用脚本打印字,也可打印变量</p><h4 id="7-弹窗"><a href="#7-弹窗" class="headerlink" title="7.弹窗"></a>7.弹窗</h4><h5 id="7-1-警告框"><a href="#7-1-警告框" class="headerlink" title="7.1 警告框"></a>7.1 警告框</h5><p>​    alert()或window.alert()使用警告框</p><h5 id="7-2确认框"><a href="#7-2确认框" class="headerlink" title="7.2确认框"></a>7.2确认框</h5><p>​    用window.confirm可以不带window对象,直接使用confirm</p><p>​    确认返回true,取消返回false</p><h5 id="7-3提示框"><a href="#7-3提示框" class="headerlink" title="7.3提示框"></a>7.3提示框</h5><p>prompt(msg,defaultText)</p><p>提示用户输入并返回用户输入的字符串</p><p>msg为提示内容,defultText为默认文本,全为可选</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;1-String-fromCharCode-65-97&quot;&gt;&lt;a href=&quot;#1-String-fromCharCode-65-97&quot; class=&quot;headerlink&quot; title=&quot;1.String.fromCharCode(65,97)&quot;&gt;&lt;/a&gt;1.St</summary>
+      
+    
+    
+    
+    <category term="学习" scheme="https://lxy6515.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="js学习" scheme="https://lxy6515.github.io/tags/js%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>信息收集之查找GitHub作者邮箱</title>
+    <link href="https://lxy6515.github.io/2021/02/21/github%E9%82%AE%E7%AE%B1%E6%9F%A5%E8%AF%A2/"/>
+    <id>https://lxy6515.github.io/2021/02/21/github%E9%82%AE%E7%AE%B1%E6%9F%A5%E8%AF%A2/</id>
+    <published>2021-02-21T11:10:30.000Z</published>
+    <updated>2021-02-26T17:30:00.633Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-通过GitHub-API接口查找"><a href="#1-通过GitHub-API接口查找" class="headerlink" title="1.通过GitHub API接口查找"></a>1.通过GitHub API接口查找</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;api.github.com&#x2F;users&#x2F;&lt;name&gt;&#x2F;events&#x2F;public</span><br></pre></td></tr></table></figure><h2 id="2-通过commits"><a href="#2-通过commits" class="headerlink" title="2.通过commits"></a>2.通过commits</h2><p>url加.patch</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;1-通过GitHub-API接口查找&quot;&gt;&lt;a href=&quot;#1-通过GitHub-API接口查找&quot; class=&quot;headerlink&quot; title=&quot;1.通过GitHub API接口查找&quot;&gt;&lt;/a&gt;1.通过GitHub API接口查找&lt;/h2&gt;&lt;figure c</summary>
+      
+    
+    
+    
+    
+    <category term="教学" scheme="https://lxy6515.github.io/tags/%E6%95%99%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>ctf学习</title>
     <link href="https://lxy6515.github.io/2021/02/21/local%E4%BC%AA%E9%80%A0/"/>
     <id>https://lxy6515.github.io/2021/02/21/local%E4%BC%AA%E9%80%A0/</id>
     <published>2021-02-21T04:13:10.000Z</published>
-    <updated>2021-02-21T06:34:07.162Z</updated>
+    <updated>2021-02-26T17:29:53.975Z</updated>
     
     <content type="html"><![CDATA[<h1 id="1-伪造"><a href="#1-伪造" class="headerlink" title="1.伪造"></a>1.伪造</h1><p>X-Forwarded-For: 127.0.0.1</p><p>Referer:<a href="https://www.google.com/">https://www.google.com</a></p><h1 id="2-上传漏洞"><a href="#2-上传漏洞" class="headerlink" title="2. 上传漏洞"></a>2. 上传漏洞</h1><h3 id="2-1危害"><a href="#2-1危害" class="headerlink" title="2.1危害"></a>2.1危害</h3><p>上传木马获取webshell(动态脚本,网页后门)</p><h3 id="2-2漏洞利用"><a href="#2-2漏洞利用" class="headerlink" title="2.2漏洞利用"></a>2.2漏洞利用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">小马:上传小马,体积小,功能少</span><br><span class="line">大马:海阳ASP大马,c99shell大马,R59大马</span><br><span class="line">一句话木马:APS一句话木马,PHP一句话木马,JSP一句话木马</span><br><span class="line">WebShell工具:中国菜刀,中国蚁剑,冰蝎</span><br></pre></td></tr></table></figure><p>大马攻击:操控磁盘,执行命令,盗密拖库,挂黑页</p>]]></content>
     
@@ -37,9 +136,7 @@
     <category term="学习" scheme="https://lxy6515.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="xff和referer伪造" scheme="https://lxy6515.github.io/tags/xff%E5%92%8Creferer%E4%BC%AA%E9%80%A0/"/>
-    
-    <category term="上传漏洞" scheme="https://lxy6515.github.io/tags/%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/"/>
+    <category term="xff和referer伪造, 上传漏洞" scheme="https://lxy6515.github.io/tags/xff%E5%92%8Creferer%E4%BC%AA%E9%80%A0-%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/"/>
     
   </entry>
   
@@ -48,7 +145,7 @@
     <link href="https://lxy6515.github.io/2021/02/19/hexo%E6%95%99%E5%AD%A6/"/>
     <id>https://lxy6515.github.io/2021/02/19/hexo%E6%95%99%E5%AD%A6/</id>
     <published>2021-02-19T15:36:09.000Z</published>
-    <updated>2021-02-20T08:08:51.702Z</updated>
+    <updated>2021-02-26T17:29:59.416Z</updated>
     
     <content type="html"><![CDATA[<h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">常见命令：</span><br><span class="line">hexo new &quot;postName&quot;      # 新建文章</span><br><span class="line">hexo new page &quot;pageName&quot; # 新建页面</span><br><span class="line">hexo generate            # 生成静态页面至public目录</span><br><span class="line">hexo server              # 开启预览访问端口（默认端口4000，&#39;ctrl + c&#39;关闭server）</span><br><span class="line">hexo deploy              # 部署到GitHub</span><br><span class="line">hexo help                # 查看帮助</span><br><span class="line">hexo version             # 查看Hexo的版本</span><br><span class="line">缩写命令：</span><br><span class="line">hexo n &#x3D;&#x3D; hexo new</span><br><span class="line">hexo g &#x3D;&#x3D; hexo generate</span><br><span class="line">hexo s &#x3D;&#x3D; hexo server</span><br><span class="line">hexo d &#x3D;&#x3D; hexo deploy</span><br><span class="line">组合命令：</span><br><span class="line">hexo s -g   # 生成并本地预览</span><br><span class="line">hexo d -g   # 生成并上传</span><br></pre></td></tr></table></figure><h2 id="文章索引目录"><a href="#文章索引目录" class="headerlink" title="文章索引目录"></a>文章索引目录</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title: 文章标题</span><br><span class="line">categories:</span><br><span class="line">  - 文章分类</span><br><span class="line">tags:</span><br><span class="line">  - 文章标签</span><br><span class="line">toc: true # 是否启用内容索引</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -72,7 +169,7 @@
     <link href="https://lxy6515.github.io/2021/02/19/markdown%E6%95%99%E5%AD%A6/"/>
     <id>https://lxy6515.github.io/2021/02/19/markdown%E6%95%99%E5%AD%A6/</id>
     <published>2021-02-19T13:05:15.000Z</published>
-    <updated>2021-02-26T12:44:15.528Z</updated>
+    <updated>2021-02-26T17:29:52.875Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Markdown"><a href="#Markdown" class="headerlink" title="Markdown"></a>Markdown</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用# 代表标题,一级标题一个#二级两个 </span><br></pre></td></tr></table></figure><h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><h4 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a><em>斜体</em></h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="emphasis">*斜体*</span></span><br></pre></td></tr></table></figure><h4 id="粗体"><a href="#粗体" class="headerlink" title="粗体"></a><strong>粗体</strong></h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">**粗体**</span></span><br></pre></td></tr></table></figure><p>很显然如果要斜体还要粗体用***</p><h4 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a><del>删除线</del></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~~删除线~~</span><br></pre></td></tr></table></figure><h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">**<span class="emphasis">*或---</span></span></span><br></pre></td></tr></table></figure><hr><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;这是引用的内容</span><br><span class="line">&gt;&gt;这是引用的内容</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;这是引用的内容</span><br><span class="line">可以无限引用&gt;嵌套引用</span><br></pre></td></tr></table></figure><hr><h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图片名称](url或本地地址)</span><br></pre></td></tr></table></figure><h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[描述文字](url)</span><br></pre></td></tr></table></figure><h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">|语文|数学|英语|</span><br><span class="line">|60|61|59|</span><br></pre></td></tr></table></figure><table><thead><tr><th>语文</th><th>数学</th><th>英语</th></tr></thead><tbody><tr><td>60</td><td>61</td><td>59</td></tr></tbody></table><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">​&#96;&#96;&#96;语言</span><br><span class="line">代码内容</span><br><span class="line">​&#96;&#96;&#96;</span><br></pre></td></tr></table></figure>]]></content>
     
